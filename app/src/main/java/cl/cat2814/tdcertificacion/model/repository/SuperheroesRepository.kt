@@ -17,15 +17,16 @@ private val superheroDao: SuperheroDao
             val response = superheroApi.getSuperheroesFromApi()
             if (response.isSuccessful) {
                 val responseSuperheroes = response.body()
-                responseSuperheroes?.let { smartphones ->
-                    val superheroesEntities = smartphones.map { it.toEntity() }
+                responseSuperheroes?.let {
+                    val superheroesEntities = it.map { it.toEntity() }
                     superheroDao.insertSuperheroes(superheroesEntities)
+
                 }
             } else {
                 Log.e("Repository", response.errorBody().toString())
             }
         } catch (exception: Exception) {
-            Log.e("Repository", "")
+            Log.e("Repository", exception.toString())
         }
     }
 
@@ -35,13 +36,13 @@ private val superheroDao: SuperheroDao
 
 
     // Función para cargar detalle de superhéroe en la database.
-    suspend fun loadSuperheroeDetailFromApiToDatabase(id : Int){
+    suspend fun loadSuperheroDetailFromApiToDatabase(id : Int){
         try {
             val response = superheroApi.getSuperheroesDetailFromApi(id)
             if (response.isSuccessful) {
                 val resp = response.body()
-                resp?.let { smartphone ->
-                    val superheroDetailEntity = smartphone.toDetailEntity()
+                resp?.let {
+                    val superheroDetailEntity = it.toDetailEntity()
                     superheroDao.insertSuperheroDetail(superheroDetailEntity)
                 }
             } else {

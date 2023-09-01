@@ -39,7 +39,7 @@ class SuperheroAdapter : RecyclerView.Adapter<SuperheroAdapter.ItemSuperheroView
         notifyDataSetChanged()
     }
 
-    class ItemSuperheroViewHolder(val binding: ItemLayoutSuperheroBinding) :
+    class ItemSuperheroViewHolder(private val binding: ItemLayoutSuperheroBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(superhero: SuperheroEntity) {
@@ -50,9 +50,8 @@ class SuperheroAdapter : RecyclerView.Adapter<SuperheroAdapter.ItemSuperheroView
             binding.cvSuperhero.setOnClickListener {
                 val bundle = Bundle()
                 bundle.putInt("id", superhero.id)
-
                 Navigation.findNavController(binding.root)
-                    .navigate(R.id.action_superheroesListFragment_to_superheroDetailFragment)
+                    .navigate(R.id.action_superheroesListFragment_to_superheroDetailFragment, bundle)
             }
         }
     }

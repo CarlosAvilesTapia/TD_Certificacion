@@ -10,8 +10,8 @@ import androidx.room.Query
 interface SuperheroDao {
 
     // Inserción y consulta para listado de superhéroes.
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertSuperheroes(superheroEntity: SuperheroEntity)
+   // @Insert(onConflict = OnConflictStrategy.REPLACE)
+   // suspend fun insertSuperheroes(superheroEntity: SuperheroEntity)
 
     // Función copiada pero cambiando el parámetro por una lista para testing.
     @Insert(onConflict = OnConflictStrategy.REPLACE)

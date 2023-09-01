@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import cl.cat2814.tdcertificacion.R
 import cl.cat2814.tdcertificacion.databinding.FragmentSuperheroDetailBinding
-import cl.cat2814.tdcertificacion.viewModel.SuperheroesViewModel
+import cl.cat2814.tdcertificacion.viewModel.SuperheroViewModel
 
 private const val ARG_SUPERHERO_ID = "id"
 
@@ -16,7 +15,7 @@ class SuperheroDetailFragment : Fragment() {
 
     private var superheroId: Int = 0
     private lateinit var binding: FragmentSuperheroDetailBinding
-    private val superheroViewModel: SuperheroesViewModel by activityViewModels()
+    private val superheroViewModel: SuperheroViewModel by activityViewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

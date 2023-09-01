@@ -6,7 +6,7 @@ data class Superhero(
     val id: Int,
     @SerializedName("nombre") val name: String,
     @SerializedName("origen") val birthPlace: String,
-    val imageLink: String,
+    @SerializedName("imagenLink")val imageLink: String,
     @SerializedName("poder") val superPower: String,
     @SerializedName("Año_creacion") val creationYear: Int
 )

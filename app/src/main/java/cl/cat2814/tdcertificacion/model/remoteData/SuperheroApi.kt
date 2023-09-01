@@ -11,6 +11,6 @@ interface SuperheroApi {
     suspend fun getSuperheroesFromApi(): Response<List<Superhero>>
 
     // Obtención de detalle de Superhéroes desde la Api.
-    @GET("superheroes/{ID}")
-    suspend fun getSuperheroesDetailFromApi(@Path("ID") id: Int): Response<SuperheroDetail>
+    @GET("superheroes/{id}")
+    suspend fun getSuperheroesDetailFromApi(@Path("id") id: Int): Response<SuperheroDetail>
 }

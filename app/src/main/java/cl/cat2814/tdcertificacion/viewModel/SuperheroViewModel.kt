@@ -8,7 +8,7 @@ import cl.cat2814.tdcertificacion.model.remoteData.SuperheroClient
 import cl.cat2814.tdcertificacion.model.repository.SuperheroesRepository
 import kotlinx.coroutines.launch
 
-class SuperheroesViewModel(application: Application) : AndroidViewModel(application) {
+class SuperheroViewModel(application: Application) : AndroidViewModel(application) {
 
     private val superheroesRepository: SuperheroesRepository
 
@@ -30,5 +30,5 @@ class SuperheroesViewModel(application: Application) : AndroidViewModel(applicat
         superheroesRepository.getSuperheroDetailFromDatabase(id)
 
     fun getSuperheroeDetailFromRepository(id: Int) =
-        viewModelScope.launch { superheroesRepository.loadSuperheroeDetailFromApiToDatabase(id) }
+        viewModelScope.launch { superheroesRepository.loadSuperheroDetailFromApiToDatabase(id) }
 }

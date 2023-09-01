@@ -3,4 +3,21 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="superhero_image">superhero_image</string>
+    <string name="translate_true">Nombre cuenta con traducción al español</string>
+    <string name="translate_false">Nombre NO cuenta con traducción al español</string>
+    <string name="send_email">Enviar correo</string>
+    <string name="mailto">mailto:</string>
+    <string name="email_address">Comicconchile@hotmail.com</string>
+    <string name="logo_comiccon">logo_comiccon</string>
+    <string name="superheroes">Superhéroes</string>
+    <string name="comiccon">ComicCon</string>
+    <string name="name">Nombre</string>
+    <string name="superhero_list_image">Superhero list image</string>
+    <string name="not_translate">Nombre NO cuenta con traducción al español</string>
+    <string name="origin">Origen:</string>
+    <string name="creation_year">Año creación:</string>
+    <string name="_1988">1988</string>
+    <string name="color">Color:</string>
+    <string name="super_powers">Poderes:</string>
+    <string name="detalle_poderes">Detalle poderes</string>
 </resources>

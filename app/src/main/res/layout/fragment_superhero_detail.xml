@@ -62,6 +62,19 @@
                 app:layout_constraintTop_toTopOf="@+id/guideline3"
                 tools:text="Nombre del superhéroe" />
 
+            <TextView
+                android:id="@+id/tv_translation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/not_translate"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_superhero_detail_name" />
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_superhero_detail"
                 android:layout_width="0dp"
@@ -76,7 +89,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_superhero_detail_name">
+                app:layout_constraintTop_toBottomOf="@+id/tv_translation">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cl_cv_superhero_detail"
@@ -84,84 +97,103 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/tvBefore"
+                        android:id="@+id/tv_origin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
-                        android:text="a definir"
-                        android:textColor="@color/secondary_text"
+                        android:text="@string/origin"
+                        android:textColor="@color/primary_text"
+                        android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/tvSmartphoneDetailLastPrice"
+                        android:id="@+id/tv_birth_place"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="8dp"
                         android:gravity="start"
-                        android:text="no se"
-                        android:textColor="@color/secondary_text"
-                        android:textSize="14sp"
-                        app:layout_constraintStart_toEndOf="@+id/tvBefore"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:text="$500.000" />
-
-                    <TextView
-                        android:id="@+id/tvSmartphoneDetailPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:gravity="start"
-                        android:text="tampoco"
                         android:textColor="@color/primary_text"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:typeface="sans"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvSmartphoneDetailLastPrice"
-                        tools:text="$350.000" />
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_origin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Melmac" />
 
                     <TextView
-                        android:id="@+id/tvSmartphoneDetailDescription"
+                        android:id="@+id/tv_creation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="8dp"
                         android:gravity="start"
-                        android:text="algo"
+                        android:text="@string/creation_year"
+                        android:textColor="@color/primary_text"
                         android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:typeface="sans"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvSmartphoneDetailPrice"
-                        tools:text="Descripción y características del producto" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_birth_place" />
 
                     <TextView
-                        android:id="@+id/tvSmartphoneDetailCredit"
+                        android:id="@+id/tv_creation_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/_1988"
+                        app:layout_constraintStart_toEndOf="@+id/tv_creation"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_birth_place" />
+
+                    <TextView
+                        android:id="@+id/tv_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
                         android:gravity="start"
-                        android:text="falta"
-                        android:textSize="16sp"
+                        android:text="@string/color"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_creation" />
+
+                    <TextView
+                        android:id="@+id/tv_superhero_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintStart_toEndOf="@+id/tv_color"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_creation_year"
+                        tools:text="rojo" />
+
+                    <TextView
+                        android:id="@+id/tv_power"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/super_powers"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_color" />
+
+                    <TextView
+                        android:id="@+id/tv_power_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="start"
+                        android:text="@string/detalle_poderes"
+                        android:textSize="14sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tvSmartphoneDetailDescription"
-                        tools:text="Solo efectivo" />
-
-                    <ImageView
-                        android:id="@+id/ivCashCredit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="120dp"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/ic_launcher_foreground"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/tvSmartphoneDetailCredit"
-                        android:contentDescription="nada" />
+                        app:layout_constraintTop_toBottomOf="@+id/tv_power"
+                        tools:text="Detalle poderes" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -16,34 +16,35 @@
         app:layout_constraintGuide_percent="0.10" />
 
     <ImageView
-        android:id="@+id/ivListTitle"
+        android:id="@+id/iv_logo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/baseline_mail_outline_24"
+        android:contentDescription="@string/logo_comiccon"
+        android:src="@drawable/logo_comiccon_chile"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/tvListLargeTitle"
+        app:layout_constraintEnd_toStartOf="@+id/tv_large_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_mail_outline_24" />
+        app:srcCompat="@drawable/logo_comiccon_chile" />
 
     <TextView
-        android:id="@+id/tvListSmallTitle"
+        android:id="@+id/tv_small_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
         android:padding="5dp"
-        android:text="superheroes"
+        android:text="@string/superheroes"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/tvListLargeTitle"
-        app:layout_constraintStart_toStartOf="@+id/tvListLargeTitle"
+        app:layout_constraintEnd_toEndOf="@+id/tv_large_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_large_title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvListLargeTitle"
+        android:id="@+id/tv_large_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -51,13 +52,13 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-black"
         android:padding="0dp"
-        android:text="comicon"
+        android:text="@string/comiccon"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvListSmallTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_small_title" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_superheroes_list"

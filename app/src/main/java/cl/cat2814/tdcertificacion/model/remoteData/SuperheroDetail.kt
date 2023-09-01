@@ -8,7 +8,7 @@ data class SuperheroDetail(
     @SerializedName("origen") val birthPlace: String,
     @SerializedName("imagenLink")val imageLink: String,
     @SerializedName("poder") val superPower: String,
-    @SerializedName("Año_creacion") val creationYear: Int,
+    @SerializedName("año_creacion") val creationYear: Int,
     val color: String,
     @SerializedName("traduccion") val translation: Boolean
 )

@@ -12,15 +12,12 @@
         tools:layout="@layout/fragment_superheroes_list" >
         <action
             android:id="@+id/action_superheroesListFragment_to_superheroDetailFragment"
-            app:destination="@id/superheroDetailFragment" />
+            app:destination="@id/superheroDetailFragment"
+            app:enterAnim="@anim/anim" />
     </fragment>
     <fragment
         android:id="@+id/superheroDetailFragment"
         android:name="cl.cat2814.tdcertificacion.view.fragments.SuperheroDetailFragment"
         android:label="fragment_superhero_detail"
-        tools:layout="@layout/fragment_superhero_detail" >
-        <action
-            android:id="@+id/action_superheroDetailFragment_to_superheroesListFragment"
-            app:destination="@id/superheroesListFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_superhero_detail" />
 </navigation>
